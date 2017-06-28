@@ -1,0 +1,12 @@
+<launch>
+	<node name="twist_to_motors" pkg="nautonomous_propulsion_differential" type="twist_to_motors.py" output="screen">
+		<param name="base_width" value="0.5" />
+        <param name="rate" value="10" />
+
+        <remap from="twist" to="/navigation/propulsion/twist"/>
+
+		<remap from="lwheel_vtarget" to="/actuation/propulsion/left"/>
+		<remap from="rwheel_vtarget" to="/actuation/propulsion/right"/>
+	</node>
+</launch>
+
