@@ -20,7 +20,7 @@
 """
 import sys
 
-import roslib; roslib.load_manifest('differential_drive')
+import roslib; roslib.load_manifest('nautonomous_propulsion_differential')
 import rospy
 from geometry_msgs.msg import Twist
 import inspect, os
@@ -133,8 +133,8 @@ def main():
     global r_min
     global r_max
     
-    x_min = rospy.get_param("~x_min", -0.20)
-    x_max = rospy.get_param("~x_max", 0.20)
+    x_min = rospy.get_param("~x_min", -1.0)
+    x_max = rospy.get_param("~x_max", 1.0)
     r_min = rospy.get_param("~r_min", -1.0)
     r_max = rospy.get_param("~r_max", 1.0)
     
